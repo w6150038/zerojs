@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>課程表</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Serif+TC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/justfont/webfonts/taipei-sans.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/justfont/webfonts/jf-openhuninn.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <base href="/zerojs/">
+    <link href="style.css" rel="stylesheet">
+    <link href="bootstrapcolor.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">第 1 階段：JavaScript 基礎 + Bootstrap 整合</h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-center">課程階段</th>
+                                    <th class="text-center">學習主題</th>
+                                    <th class="text-center">課程說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>變數與資料型別</td>
+                                    <td>了解 JS 裡各種資料型別與宣告方式</td>
+                                </tr>
+                                <tr>
+                                    <td>02</td>
+                                    <td>運算子與條件判斷</td>
+                                    <td>比較運算子、邏輯運算子與 if/else 判斷邏輯</td>
+                                </tr>
+                                <tr>
+                                    <td>03</td>
+                                    <td>函式與參數</td>
+                                    <td>拆分邏輯、參數與回傳值</td>
+                                </tr>
+                                <tr>
+                                    <td>04</td>
+                                    <td>陣列與物件基礎</td>
+                                    <td>管理清單與資料組合 (例如相簿 / 表單欄位)</td>
+                                </tr>
+                                <tr>
+                                    <td>05</td>
+                                    <td>DOM 操作 (整合 Bootstrap)</td>
+                                    <td>用 JavaScript 控制畫面元素 (例如顯示 / 隱藏 / 修改樣式)</td>
+                                </tr>
+                                <tr>
+                                    <td>06</td>
+                                    <td>事件處理與互動</td>
+                                    <td>綁定 click / submit 等事件，處理互動邏輯</td>
+                                </tr>
+                                <tr>
+                                    <td>07</td>
+                                    <td>迴圈與反覆操作</td>
+                                    <td>使用 for / while / forEach 等處理清單資料與 DOM 輸出</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">第 2 階段：進階資料與控制流程 (多筆資料處理 + 實用邏輯)</h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-center">課程階段</th>
+                                    <th class="text-center">學習主題</th>
+                                    <th class="text-center">課程說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08</td>
+                                    <td>陣列方法 (push, splice)</td>
+                                    <td>新增、刪除、查找、排序清單內容，常用於購物車、列表管理等</td>
+                                </tr>
+                                <tr>
+                                    <td>09</td>
+                                    <td>巢狀資料與物件陣列</td>
+                                    <td>陣列包物件、物件包陣列，管理複雜結構 (如相簿清單、學生資料)</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>表單資料處理與驗證</td>
+                                    <td>使用者輸入、錯誤檢查、格式驗證、預防表單誤送出</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>計時器與時間控制</td>
+                                    <td>setTimeout、setInterval，應用在倒數、輪播等功能</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>錯誤處理與防呆</td>
+                                    <td>try/catch、檢查 undefined / null、提高程式穩定度</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">第 3 階段：Bootstrap + JavaScript 實務整合</h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-center">課程階段</th>
+                                    <th class="text-center">學習主題</th>
+                                    <th class="text-center">課程說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Bootstrap + JS 表單驗證整合</td>
+                                    <td>使用 Bootstrap 樣式與 JS 驗證配合 (登入 / 報名表單)</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>動態內容產生卡片與列表</td>
+                                    <td>用 JS 產出多張 HTML 卡片 (例如相簿、留言、訊息清單)</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Modal 與 Carousel 整合控制</td>
+                                    <td>開啟 Modal、控制 Carousel 切換、載入大圖與縮圖</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>localStorage 儲存資料</td>
+                                    <td>將資料儲存在瀏覽器中 (如：登入狀態、喜好設定、購物清單)</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>專案整合：JS + Bootstrap 小作品</td>
+                                    <td>整合課程成果，製作完整互動網頁 (例如：報名表 + 分頁 + 縮圖輪播)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">第 4 階段：進階應用與資料串接</h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-center">課程階段</th>
+                                    <th class="text-center">學習主題</th>
+                                    <th class="text-center">課程說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>18</td>
+                                    <td>fetch API 資料串接</td>
+                                    <td>使用 fetch() 取得 JSON 資料，常用於串接後端 / 開放 API</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>JSON 格式解析與應用</td>
+                                    <td>認識 JSON 結構、使用 JS 讀寫 JSON 串列資料</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>Canvas 圖形與動畫</td>
+                                    <td>畫布應用、繪製圖形、動畫效果、簡易小遊戲</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>JavaScript 模組化</td>
+                                    <td>拆分 JS 檔案、模組引入、使用 import/export 讓專案更有結構</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS（包含下拉與漢堡選單功能） -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>從零開始學 JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Serif+TC&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/justfont/webfonts/taipei-sans.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/justfont/webfonts/jf-openhuninn.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <base href="/zerojs/">
+  <link href="style.css" rel="stylesheet">
+  <link href="bootstrapcolor.css" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="carousel_1" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-indicators">
+      <button type="button" class="active" data-bs-target="#carousel_1" data-bs-slide-to="0" aria-current="true" aria-label="輪播1"></button>
+      <button type="button" data-bs-target="#carousel_1" data-bs-slide-to="1" aria-label="輪播2"></button>
+      <button type="button" data-bs-target="#carousel_1" data-bs-slide-to="2" aria-label="輪播3"></button>
+      <button type="button" data-bs-target="#carousel_1" data-bs-slide-to="3" aria-label="輪播4"></button>
+      <button type="button" data-bs-target="#carousel_1" data-bs-slide-to="4" aria-label="輪播5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 40vh; background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+          <h3 class="fw-bold">學習 JavaScript 從這裡開始</h3>
+          <p class="lead">從變數、條件、函式一路學到 API 實戰</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 40vh; background: linear-gradient(135deg, #e02e2ecb, #ffd200);">
+          <h3 class="fw-bold">每堂課都有範例解說與練習</h3>
+          <p class="lead">讓你不只看懂，還能自己動手做</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 40vh; background: linear-gradient(135deg, #00c6ff, #0072ff);">
+          <h3 class="fw-bold">整合 Bootstrap 打造互動頁面</h3>
+          <p class="lead">學會做出美觀又好用的前端介面</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 40vh; background: linear-gradient(135deg, #058530, #38f9d7);">
+          <h3 class="fw-bold">挑戰網頁互動與事件控制</h3>
+          <p class="lead">留言板、表單驗證、倒數計時，全都學會</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 40vh; background: linear-gradient(135deg, #f953c6, #b91d73);">
+          <h3 class="fw-bold">挑戰互動功能與 API 整合</h3>
+          <p class="lead">讓你的網頁具備即時資料與互動能力</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel_1" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <section class="py-3 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-4">為什麼選擇本站？</h2>
+      <div class="row row-cols-3 row-cols-md-3 row-cols-lg-3">
+        <div class="col">
+          <i class="bi bi-lightbulb fs-1 text-warning"></i>
+          <h5 class="mt-3">快速上手</h5>
+          <p>從 0 開始由淺到深學會 JavaScript，讓網頁更加互動。</p>
+        </div>
+        <div class="col">
+          <i class="bi bi-code-slash fs-1 text-primary"></i>
+          <h5 class="mt-3">大量範例</h5>
+          <p>每個章節裡搭配教學說明、範例解說與練習題。</p>
+        </div>
+        <div class="col">
+          <i class="bi bi-bootstrap-fill fs-1 text-purple"></i>
+          <h5 class="mt-3">結合 Bootstrap</h5>
+          <p>學會網頁版面，讓網頁更加美觀。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="courses" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">JS 學習區</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 30vh; background: linear-gradient(135deg, #00c6ff, #0072ff 100%);">
+                <h4 class="fw-bold">第 3 課：函式與參數</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">拆分邏輯、參數與回傳值</p>
+                <a href="02_operators.html" class="btn btn-outline-orange">前往閱讀</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 30vh; background: linear-gradient(135deg, #e02e2ecb, #ffd200 100%);">
+                <h4 class="fw-bold">第 2 課：運算子與條件判斷</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">比較運算子、邏輯運算子與 if/else 判斷邏輯</p>
+                <a href="02_operators.html" class="btn btn-outline-orange">前往閱讀</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="d-flex flex-column justify-content-center align-items-center w-100 text-white" style="height: 30vh; background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+                <h4 class="fw-bold">第 1 課：變數與資料型別</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">了解 JS 裡各種資料型別與宣告方式</p>
+                <a href="01_variables.html" class="btn btn-outline-orange">前往閱讀</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS（包含下拉與漢堡選單功能） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>

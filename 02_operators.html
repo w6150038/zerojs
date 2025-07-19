@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>條件判斷與邏輯運算子</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Serif+TC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/justfont/webfonts/taipei-sans.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/justfont/webfonts/jf-openhuninn.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <base href="/zerojs/">
+    <link href="style.css" rel="stylesheet">
+    <link href="bootstrapcolor.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <h2 class="text-primary text-center mt-2 mb-2">條件判斷與邏輯運算子</h2>
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">一、if / else </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <p>根據條件執行不同的程式邏輯。</p>
+                        <span>基本語法：</span>
+                        <pre><code>
+                            if (條件) {
+                                條件成立時執行這段程式
+                            } else {
+                                條件不成立時執行這段程式
+                            }
+                        </code></pre>
+                    </div>
+                    <div class="col">
+                        <span>範例練習：</span>
+                        <pre><code>
+                            let age1 = 18;
+
+                            if (age1 >= 18) {
+                                console.log('已成年！');
+                            } else {
+                                console.log('未成年！');
+                            }
+                        </code></pre>
+                        <script>
+                            let age1 = 18;
+
+                            if (age1 >= 18) {
+                                console.log('已成年！');
+                            } else {
+                                console.log('未成年！');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">二、比較運算子 </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-center">比較符號</th>
+                                    <th class="text-center">說明</th>
+                                    <th class="text-center">範例 (回傳布林值)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>==</td>
+                                    <td>相等 (值相同)</td>
+                                    <td>5 == "5"，回傳 true。</td>
+                                </tr>
+                                <tr>
+                                    <td>===</td>
+                                    <td>嚴格相等 (值和型別必須相同)</td>
+                                    <td>5 === "5"，回傳 false，因為左邊是數字，右邊是字串。</td>
+                                </tr>
+                                <tr>
+                                    <td>!=</td>
+                                    <td>不等於</td>
+                                    <td>3 != 5，回傳 true。</td>
+                                </tr>
+                                <tr>
+                                    <td>>, <, >=, <=</td>
+                                    <td>大小比較</td>
+                                    <td>10 > 5，回傳 true。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">三、邏輯運算子 </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-center">邏輯符號</th>
+                                    <th class="text-center">名稱</th>
+                                    <th class="text-center">用法</th>
+                                    <th class="text-center">範例</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>&&</td>
+                                    <td>AND</td>
+                                    <td>兩邊都要為 true 才執行。</td>
+                                    <td>age >= 18 && isNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>||</td>
+                                    <td>OR</td>
+                                    <td>兩邊只要有一邊為 true 就執行。</td>
+                                    <td>age >= 18 || isNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>!</td>
+                                    <td>NOT</td>
+                                    <td>取反值。</td>
+                                    <td>!isLogin (如果沒登入)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <span>範例練習：</span>
+                        <pre><code>
+                            let username = "admin";
+                            let password = "1234";
+                            
+                            if (username === "admin" && password === "1234") {
+                                console.log("登入成功！");
+                            } else {
+                                console.log("登入失敗！");
+                            }
+                        </code></pre>
+                        <script>
+                            let username = "admin";
+                            let password = "1234";
+
+                            if (username === "admin" && password === "1234") {
+                                console.log("登入成功！");
+                            } else {
+                                console.log("登入失敗！");
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">四、if / else 練習題 </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <ol>
+                            <li>宣告一個變數 score，分數為 78 分。</li>
+                            <li>用 if / else 判斷是否及格。(及格分數為 60 分)。</li>
+                            <li>如果及格就輸出 "恭喜及格！"，不及格就輸出 "需要加油！"。</li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <pre><code>
+                            let score1 = 78;
+                            
+                            if (score1 >= 60) {
+                                console.log("恭喜及格！");
+                            } else {
+                                console.log("需要加油！");
+                            }
+                        </code></pre>
+                        <script>
+                            let score1 = 78;
+
+                            if (score1 >= 60) {
+                                console.log("恭喜及格！");
+                            } else {
+                                console.log("需要加油！");
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">五、多層判斷 else if </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <span>多層判斷語法：</span>
+                        <pre><code>
+                            if (條件 1) {
+                                條件 1 成立時執行這段程式
+                            } else if (條件 2) {
+                                條件 2 成立時執行這段程式
+                            } else {
+                                以上條件都不成立時執行這段程式
+                            }
+                        </code></pre>
+                    </div>
+                    <div class="col">
+                        <span>範例練習 (分數等級判斷)：</span>
+                        <h5>分數結果：<span id="score2SpanResult"></span></h5>
+                        <div id="score2DivResult"></div>
+                        <pre><code>
+                            let score2 = 78;
+                            let score2SpanResult = document.getElementById('score2SpanResult');
+                            let score2DivResult = document.getElementById('score2DivResult');
+                            
+                            score2SpanResult.textContent = `${score2} 分`;
+                            
+                            if (score2 >= 90) {
+                                score2DivResult.textContent = "超級優秀！";
+                                score2DivResult.className = "alert alert-success";
+                            } else if (score2 >= 60) {
+                                score2DivResult.textContent = "恭喜及格！";
+                                score2DivResult.className = "alert alert-primary";
+                            } else {
+                                score2DivResult.textContent = "不及格，需要加油！";
+                                score2DivResult.className = "alert alert-danger";
+                            }
+                        </code></pre>
+                        <script>
+                            let score2 = 78;
+                            let score2SpanResult = document.getElementById('score2SpanResult');
+                            let score2DivResult = document.getElementById('score2DivResult');
+                            
+                            score2SpanResult.textContent = `${score2} 分`;
+
+                            if (score2 >= 90) {
+                                score2DivResult.textContent = "超級優秀！";
+                                score2DivResult.className = "alert alert-success";
+                            } else if (score2 >= 60) {
+                                score2DivResult.textContent = "恭喜及格！";
+                                score2DivResult.className = "alert alert-primary";
+                            } else {
+                                score2DivResult.textContent = "不及格，需要加油！";
+                                score2DivResult.className = "alert alert-danger";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">六、多層判斷練習題 </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <ol>
+                            <li>設定 score = 92。</li>
+                            <li>用 if / else if / else 判斷成績。</li>
+                            <li>顯示對應的訊息在畫面上。</li>
+                            <li>使用 Bootstrap Alert 套用不同顏色。</li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <h5>分數結果：<span id="score3SpanResult"></span></h5>
+                        <div id="score3DivResult"></div>
+                        <pre><code>
+                            let score3 = 92;
+                            let score3SpanResult = document.getElementById('score3SpanResult');
+                            let score3DivResult = document.getElementById('score3DivResult');
+                            
+                            score3SpanResult.textContent = `${score3} 分`;
+                            
+                            if (score3 >= 90) {
+                                score3DivResult.textContent = "🏆超級優秀！";
+                                score3DivResult.className = "alert alert-success";
+                            } else if (score3 >= 60) {
+                                score3DivResult.textContent = "✌恭喜及格！";
+                                score3DivResult.className = "alert alert-primary";
+                            } else {
+                                score3DivResult.textContent = "😢不及格，需要加油！";
+                                score3DivResult.className = "alert alert-danger";
+                            }
+                        </code></pre>
+                        <script>
+                            let score3 = 92;
+                            let score3SpanResult = document.getElementById('score3SpanResult');
+                            let score3DivResult = document.getElementById('score3DivResult');
+
+                            score3SpanResult.textContent = `${score3} 分`;
+
+                            if (score3 >= 90) {
+                                score3DivResult.textContent = "🏆超級優秀！";
+                                score3DivResult.className = "alert alert-success";
+                            } else if (score3 >= 60) {
+                                score3DivResult.textContent = "✌恭喜及格！";
+                                score3DivResult.className = "alert alert-primary";
+                            } else {
+                                score3DivResult.textContent = "😢不及格，需要加油！";
+                                score3DivResult.className = "alert alert-danger";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3 text-dark">
+            <div class="container table-responsive">
+                <h3 class="text-dark text-start mb-2">七、挑戰題 </h3>
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <span>1、年齡滿 18 歲 (含) 才可辦會員，有會員資格才能享有折扣。</span>
+                        <div>
+                            年齡：<span id="spanAge"></span><br />
+                            會員：<span id="spanVIP"></span><br />
+                            折扣：<span id="spanDiscount"></span>
+                        </div>
+                        <pre><code>
+                            let spanAge = document.getElementById('spanAge');
+                            let spanVIP = document.getElementById('spanVIP');
+                            let spanDiscount = document.getElementById('spanDiscount');
+
+                            let age2 = 23;
+                            let isVIP = false;
+
+                            spanAge.textContent = `${age2} 歲`;
+
+                            if (age2 < 18) {
+                                isVIP = false;
+                                spanAge.className = 'text-danger';
+                                spanVIP.textContent = `❌未滿 18 歲，不可辦理會員！`;
+                                spanVIP.className = 'text-danger';
+                                spanDiscount.textContent = '❌無';
+                                spanDiscount.className = 'text-danger';
+                            } else if (age2 >= 18 && isVIP) {
+                                spanAge.className = 'text-success';
+                                spanVIP.textContent = '✔是';
+                                spanVIP.className = 'text-success';
+                                spanDiscount.textContent = '✔有';
+                                spanDiscount.className = 'text-success';
+                            } else {
+                                spanAge.className = 'text-success';
+                                spanVIP.textContent = '❌否';
+                                spanVIP.className = 'text-danger';
+                                spanDiscount.textContent = '❌無';
+                                spanDiscount.className = 'text-danger';
+                            }
+                        </code></pre>
+                        <script>
+                            let spanAge = document.getElementById('spanAge');
+                            let spanVIP = document.getElementById('spanVIP');
+                            let spanDiscount = document.getElementById('spanDiscount');
+
+                            let age2 = 23;
+                            let isVIP = false;
+
+                            spanAge.textContent = `${age2} 歲`;
+
+                            if (age2 < 18) {
+                                isVIP = false;
+                                spanAge.className = 'text-danger';
+                                spanVIP.textContent = `❌未滿 18 歲，不可辦理會員！`;
+                                spanVIP.className = 'text-danger';
+                                spanDiscount.textContent = '❌無';
+                                spanDiscount.className = 'text-danger';
+                            } else if (age2 >= 18 && isVIP) {
+                                spanAge.className = 'text-success';
+                                spanVIP.textContent = '✔是';
+                                spanVIP.className = 'text-success';
+                                spanDiscount.textContent = '✔有';
+                                spanDiscount.className = 'text-success';
+                            } else {
+                                spanAge.className = 'text-success';
+                                spanVIP.textContent = '❌否';
+                                spanVIP.className = 'text-danger';
+                                spanDiscount.textContent = '❌無';
+                                spanDiscount.className = 'text-danger';
+                            }
+                        </script>
+                    </div>
+                    <div class="col">
+                        <span>2、檢查帳號密碼是否正確</span>
+                        <div>
+                            管理員帳號：<span id="spanAccount"></span><br />
+                            管理員密碼：<span id="spanPassword"></span><br />
+                            登入結果：<span id="spanResult"></span>
+                        </div>
+                        <pre><code>
+                            let spanAccount = document.getElementById('spanAccount');
+                            let spanPassword = document.getElementById('spanPassword');
+                            let spanResult = document.getElementById('spanResult');
+                            
+                            let loginAccount = 'admin';
+                            let loginPassword = '1234';
+                            
+                            spanAccount.textContent = `${loginAccount}`;
+                            spanPassword.textContent = `${loginPassword}`;
+                            
+                            if (loginAccount === 'admin' && loginPassword === '1234') {
+                                spanAccount.className = 'text-success';
+                                spanPassword.className = 'text-success';
+                                spanResult.textContent = '✔登入成功！';
+                                spanResult.className = 'text-success';
+                            } else {
+                                spanAccount.className = 'text-danger';
+                                spanPassword.className = 'text-danger';
+                                spanResult.textContent = '❌登入失敗！';
+                                spanResult.className = 'text-danger';
+                            }
+                        </code></pre>
+                        <script>
+                            let spanAccount = document.getElementById('spanAccount');
+                            let spanPassword = document.getElementById('spanPassword');
+                            let spanResult = document.getElementById('spanResult');
+
+                            let loginAccount = 'admin';
+                            let loginPassword = '1234';
+
+                            spanAccount.textContent = `${loginAccount}`;
+                            spanPassword.textContent = `${loginPassword}`;
+
+                            if (loginAccount === 'admin' && loginPassword === '1234') {
+                                spanAccount.className = 'text-success';
+                                spanPassword.className = 'text-success';
+                                spanResult.textContent = '✔登入成功！';
+                                spanResult.className = 'text-success';
+                            } else {
+                                spanAccount.className = 'text-danger';
+                                spanPassword.className = 'text-danger';
+                                spanResult.textContent = '❌登入失敗！';
+                                spanResult.className = 'text-danger';
+                            }
+                        </script>
+                    </div>
+
+                    <div class="col">
+                        <span>3、開店時間判斷</span><br />
+                        <span>判斷目前時間是否在「開店時間」之內 (上午 9:00 ~ 下午 5:00)</span>
+                        <div>
+                            目前時間：<span id="spanNow" class="text-primary"></span><br />
+                            營業狀態：<span id="spanOpenStatus"></span>
+                        </div>
+                        <pre><code>
+                            let spanNow = document.getElementById('spanNow');
+                            let spanOpenStatus = document.getElementById('spanOpenStatus');
+
+                            const openHour = 9;
+                            const closeHour = 17;
+
+                            let nowHour = 11;
+
+                            spanNow.textContent = `${nowHour} : 00`;
+
+                            if (nowHour >= openHour && nowHour < closeHour) {
+                                spanOpenStatus.textContent = '✔目前營業中！';
+                                spanOpenStatus.className = 'text-success';
+                            } else {
+                                spanOpenStatus.textContent = '❌很抱歉，目前非營業時間！';
+                                spanOpenStatus.className = 'text-danger';
+                            }
+                        </code></pre>
+                        <script>
+                            let spanNow = document.getElementById('spanNow');
+                            let spanOpenStatus = document.getElementById('spanOpenStatus');
+
+                            const openHour = 9;
+                            const closeHour = 17;
+
+                            let nowHour = 11;
+
+                            spanNow.textContent = `${nowHour} : 00`;
+
+                            if (nowHour >= openHour && nowHour < closeHour) {
+                                spanOpenStatus.textContent = '✔目前營業中！';
+                                spanOpenStatus.className = 'text-success';
+                            } else {
+                                spanOpenStatus.textContent = '❌很抱歉，目前非營業時間！';
+                                spanOpenStatus.className = 'text-danger';
+                            }
+                        </script>
+                    </div>
+
+                    <div class="col">
+                        <span>4、判斷比賽分數對應獎勵</span><br />
+                        <ul>
+                            <li>90 ~ 100 分：金牌</li>
+                            <li>80 ~ 89 分：銀牌</li>
+                            <li>70 ~ 79 分：銅牌</li>
+                            <li>60 ~ 69 分：未得獎</li>
+                        </ul>
+                        <div>
+                            分數：<span id="spanScore"></span><br />
+                            獎勵：<span id="spanPrize"></span>
+                        </div>
+                        <pre><code>
+                            let spanScore = document.getElementById('spanScore');
+                            let spanPrize = document.getElementById('spanPrize');
+
+                            let score = 84;
+
+                            spanScore.textContent = `${score} 分`;
+
+                            if (score >= 90 && score <= 100) {
+                                spanPrize.textContent = '🥇金牌';
+                                spanScore.className = 'text-success';
+                            } else if (score >= 80) {
+                                spanPrize.textContent = '🥈銀牌';
+                                spanScore.className = 'text-secondary';
+                            } else if (score >= 70) {
+                                spanPrize.textContent = '🏅銅牌';
+                                spanScore.className = 'text-warning';
+                            } else {
+                                spanPrize.textContent = '😥未得獎';
+                                spanScore.className = 'text-danger';  
+                            }
+                        </code></pre>
+                        <script>
+                            let spanScore = document.getElementById('spanScore');
+                            let spanPrize = document.getElementById('spanPrize');
+
+                            let score = 84;
+
+                            spanScore.textContent = `${score} 分`;
+
+                            if (score >= 90 && score <= 100) {
+                                spanPrize.textContent = '🥇金牌';
+                                spanScore.className = 'text-success';
+                            } else if (score >= 80) {
+                                spanPrize.textContent = '🥈銀牌';
+                                spanScore.className = 'text-secondary';
+                            } else if (score >= 70) {
+                                spanPrize.textContent = '🏅銅牌';
+                                spanScore.className = 'text-warning';
+                            } else {
+                                spanPrize.textContent = '😥未得獎';
+                                spanScore.className = 'text-danger';  
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS（包含下拉與漢堡選單功能） -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
